@@ -27,9 +27,9 @@ export const WhatWeDo = () => {
                 index * (window.innerWidth >= 768 ? 100 : 60)
               }px)`,
             }}
-            className={`bg-[#2A2626] flex  items-center justify-center text-center p-5 flex-col w-full h-[400px] relative -top-[10%] rounded-[30px]`}
+            className={`bg-[#2A2626] flex  items-center justify-center text-center p-5 flex-col w-full h-[450px] relative -top-[10%] rounded-[30px]`}
           >
-            <img className="w-auto h-32" src={image} alt="Zdjęcie" />
+            <img className="w-auto h-48" src={image} alt="Zdjęcie" />
             <div className="flex gap-3 flex-col p-5 text-[#fff]">
               <p>{title}</p>
               <p>{description}</p>
