@@ -1,7 +1,7 @@
 export const timelineAnimation = {
   hidden: { height: 0 },
   visible: {
-    height: 160,
+    height: 185,
     transition: {
       duration: 3,
       ease: "easeInOut",
@@ -11,7 +11,7 @@ export const timelineAnimation = {
 export const timelineAnimation02 = {
   hidden: { height: 0 },
   visible: {
-    height: 260,
+    height: 290,
     transition: {
       duration: 3,
       ease: "easeInOut",

@@ -6,8 +6,8 @@ import { LookTile } from "./tiles/LookTile";
 
 export const Look = () => {
   return (
-    <div className="container mx-auto px-5 my-32 tablet:mt-96 mb-32 relative">
-      <p className="text-center text-[60px] font-[900] mb-10 text-[#F69197]">
+    <div className="container mx-auto px-5 my-32 relative">
+      <p className="text-center text-[60px] laptop:text-start laptop:text-[150px] tablet:text-[70px] font-[900] mb-10 text-[#F69197]">
         Jak to wygląda?
       </p>
       <LookTile
@@ -16,6 +16,7 @@ export const Look = () => {
         animation={timelineAnimation}
         content={CustomizedTimelineContent}
         data={timelineData}
+        height="120"
       />
       <LookTile
         titleNumber="2"
@@ -23,6 +24,7 @@ export const Look = () => {
         animation={timelineAnimation02}
         content={CustomizedTimelineContent}
         data={timelineData02}
+        height="180"
       />
     </div>
   );

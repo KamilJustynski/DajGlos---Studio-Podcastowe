@@ -17,14 +17,16 @@ const Information = () => {
       <h3 className="text-[30px] tablet:hidden text-center tablet:text-[60px] text-[#FFFFFF]">
         Tworzymy przestrzeń...
       </h3>
-      <div className="h-[200px] flex flex-col justify-center items-center tablet:items-start">
+      <div className="h-[200px] laptop:h-[500px] flex flex-col justify-center items-center tablet:items-start">
         <div className="tablet:w-auto text-[#FFFFFF] tablet:flex tablet:flex-col tablet:items-start hidden">
-          <h4 className="text-[30px] ">Tworzymy przestrzeń...</h4>
+          <h4 className="text-[30px] laptop:font-[700]">
+            Tworzymy przestrzeń...
+          </h4>
           <div className="flex flex-col">
             <p className="tablet:w-[310px]">
               do tworzenia najwyższej jakości materiałów takich jak:
             </p>
-            <div className="font-bold w-[310px]">
+            <div className="font-bold w-[310px] laptop:w-[400px]">
               Podcasty i videocasty,
               <br />
               Content na Social Media (viralowe rolki),
@@ -35,6 +37,11 @@ const Information = () => {
               Landing Page, Sklepy i Strony WWW,
               <br />
               Grafiki, Video i Reklamy <br />
+              <p className="hidden text-[#FFFFFF] laptop:flex laptop:mt-3">
+                Dzięki temu możesz dać swój głos światu i dzielić się ideami,
+                pasjami oraz mówić o swoim biznesie w profesjonalny i jakościowy
+                sposób.
+              </p>
             </div>
           </div>
         </div>
@@ -49,11 +56,11 @@ const Information = () => {
           return (
             <div
               key={index}
-              className={`absolute tablet:right-32 w-max transform font-[900] -translate-x-1/2 transition-all duration-1000 ease-in-out
+              className={`absolute tablet:right-20 laptop:left-1/3 laptop:ml-44 laptop:mt-20 w-max transform font-[900] -translate-x-1/2 transition-all duration-1000 ease-in-out
                 ${
                   isCenter
-                    ? "text-[40px] tablet:text-[30px] text-[#F69197]"
-                    : "text-[20px] tablet:text-[15px] text-[#F69197] blur-[2px]"
+                    ? "text-[40px] tablet:text-[30px] laptop:text-[50px] text-[#F69197]"
+                    : "text-[20px] tablet:text-[15px] laptop:text-[30px] text-[#F69197] blur-[2px]"
                 }   ${isZero ? "blur-[3px]" : ""} ${
                 isFour ? "blur-[2px]" : ""
               } ${isOne ? "blur-[1px]" : ""}`}
@@ -67,7 +74,12 @@ const Information = () => {
             </div>
           );
         })}
-        <p className="mt-10 hidden tablet:flex text-[#FFFFFF]">
+        <img
+          src="Micro.png"
+          alt=""
+          className="absolute right-0 hidden laptop:flex laptop:h-[600px]"
+        />
+        <p className="mt-10 hidden tablet:flex text-[#FFFFFF] laptop:hidden">
           Dzięki temu możesz dać swój głos światu i dzielić się ideami, pasjami
           oraz mówić o swoim biznesie w profesjonalny i jakościowy sposób.
         </p>

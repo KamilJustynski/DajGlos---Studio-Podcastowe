@@ -6,6 +6,7 @@ import { WhatWeDo } from "./components/WhatWeDo";
 import { Look } from "./components/Look";
 import Studio from "./components/Studio";
 import { Valuations } from "./components/Valuations";
+import SocialMedia from "./components/SocialMedia";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Look />
       <Studio />
       <Valuations />
+      <SocialMedia />
     </div>
   );
 }

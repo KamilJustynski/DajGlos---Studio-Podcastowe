@@ -10,14 +10,25 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-between laptop:mx-10">
       <img
         className="w-24 h-24 tablet:w-44 tablet:h-44"
         src="Logotype.png"
         alt="Logotyp Daj-Głos"
       />
-      <button onClick={handleOpen} className="mr-4 tablet:mr-6">
+      <button onClick={handleOpen} className="mr-4 tablet:mr-6 laptop:hidden">
         <GiHamburgerMenu className="text-white text-[20px] tablet:text-[30px]" />
+      </button>
+
+      <div className="hidden laptop:flex text-white justify-center items-center gap-10">
+        {NAVBAR_LINKS.map((link, index) => (
+          <a href="#" key={index}>
+            {link}
+          </a>
+        ))}
+      </div>
+      <button className="hidden laptop:flex mr-10 rounded-[50px] text-[#fff] bg-[#567FD8] px-5 py-2">
+        Bezpłatna konsultacja
       </button>
 
       {open && (

@@ -11,4 +11,5 @@ export interface LookTileScheme {
   animation: Variants;
   content: (item: TimelineDataProps, index: number) => React.ReactNode;
   data: TimelineDataProps[];
+  height: string;
 }
