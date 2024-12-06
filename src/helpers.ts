@@ -61,3 +61,43 @@ export const WHAT_WE_DO_SQUARE = [
       "Możemy stworzyć grafiki i reklamy które dodatkowo zareklamują Twój podcast lub kurs.",
   },
 ];
+
+export const timelineData = [
+  {
+    title: "Wybierz termin",
+    description:
+      "W łatwy sposób sprawdź w kalendarzu czy termin jest  dostępnyi odpowiedź na kilka pytań o Twoim projekcie.",
+  },
+  {
+    title: "Zarezerwuj studio",
+    description:
+      "Po rezerwacji w ciągu 24h wracamy z wyceną i potwierdzamy termin.",
+  },
+  {
+    title: "Realizacja projektu",
+    description:
+      "Później zajmujemy się resztą od nagrania po montaż i realizację zrobimy to czego potrzebujesz!",
+  },
+];
+
+export const timelineData02 = [
+  {
+    title: "Zarezerwuj darmową konsultację",
+    description:
+      "na którym omówimy wszystkie aspekty na których Ci zależy i poznamy lepiej Twoje potrzeby",
+  },
+  {
+    title: "Specjalna oferta",
+    description: "w ciągu 3 dni wrócimy do Ciebie ze specjalną ofertą",
+  },
+  {
+    title: "Zarezerwuj studio",
+    description:
+      "Potem Twój ruch zarezerwuj termin kiedy chcesz wykonać nagrania ",
+  },
+  {
+    title: "Realizacja projektu",
+    description:
+      "Później zajmujemy się resztą od nagrania po montaż i realizację zrobimy to czego potrzebujesz!",
+  },
+];

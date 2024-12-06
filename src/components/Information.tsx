@@ -13,7 +13,7 @@ const Information = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="container mx-auto px-5 mb-20 pt-32">
+    <div className="container mx-auto px-5 my-32">
       <h3 className="text-[30px] tablet:hidden text-center tablet:text-[60px] text-[#FFFFFF]">
         Tworzymy przestrzeń...
       </h3>
@@ -81,7 +81,11 @@ const Information = () => {
               className="flex items-center justify-center gap-2 w-full"
             >
               <div>
-                <RxTriangleRight size={20} />
+                <img
+                  src="ArrowRight.png"
+                  alt=""
+                  className="w-10 h-10 rotate-180"
+                />
               </div>
               <p className="text-[12px] w-[140px] text-start">{text}</p>
             </div>
