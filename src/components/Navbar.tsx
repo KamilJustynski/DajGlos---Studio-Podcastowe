@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { NAVBAR_LINKS } from "../helpers";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [open, isOpen] = useState(false);
@@ -10,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex items-center justify-between laptop:mx-10">
+    <div className="flex items-center justify-between desktop:px-10">
       <img
         className="w-24 h-24 tablet:w-44 tablet:h-44"
         src="Logotype.png"
@@ -20,16 +21,25 @@ const Navbar = () => {
         <GiHamburgerMenu className="text-white text-[20px] tablet:text-[30px]" />
       </button>
 
-      <div className="hidden laptop:flex text-white justify-center items-center gap-10">
+      <div className="hidden laptop:flex text-white justify-center items-center gap-10 desktop:gap-16 laptop:text-[16px] desktop:text-[20px]">
         {NAVBAR_LINKS.map((link, index) => (
-          <a href="#" key={index}>
+          <a
+            href="#"
+            key={index}
+            className="hover:text-[#E4E4E4] hover:scale-105 duration-150"
+          >
             {link}
           </a>
         ))}
       </div>
-      <button className="hidden laptop:flex mr-10 rounded-[50px] text-[#fff] bg-[#567FD8] px-5 py-2">
+      <motion.button
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+        className="hidden laptop:flex mr-10 rounded-[50px] text-[#fff] bg-[#567FD8] px-5 py-2 laptop:text-[16px] desktop:text-[20px] desktop:px-8 desktop:py-4"
+      >
         Bezpłatna konsultacja
-      </button>
+      </motion.button>
 
       {open && (
         <div

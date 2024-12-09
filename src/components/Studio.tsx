@@ -11,10 +11,10 @@ const Studio = () => {
       </p>
       <div className="flex flex-col gap-6 laptop:flex-row">
         <div>
-          <img src="dzien.png" alt="" />
+          <img src="dzien.png" alt="" className="w-full" />
         </div>
         <div>
-          <img src="noc.png" alt="" />
+          <img src="noc.png" alt="" className="w-full" />
         </div>
       </div>
     </div>

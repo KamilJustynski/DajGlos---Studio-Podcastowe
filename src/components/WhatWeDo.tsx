@@ -1,7 +1,8 @@
 "use client";
 import { useRef } from "react";
 import { WHAT_WE_DO_SQUARE } from "../helpers";
-import { motion, useScroll } from "framer-motion";
+import { useScroll } from "framer-motion";
+import SectionHeader from "./tiles/SectionHeader";
 
 export const WhatWeDo = () => {
   const container = useRef<HTMLDivElement>(null);
@@ -12,9 +13,7 @@ export const WhatWeDo = () => {
 
   return (
     <main className="mt-32 mb-32 tablet:mt-44 container mx-auto px-5">
-      <p className="text-center laptop:text-[150px] text-[60px] tablet:text-[70px] font-[900] text-[#F69197]">
-        Co robimy?
-      </p>
+      <SectionHeader title="Co robimy?" />
       {WHAT_WE_DO_SQUARE.map(({ image, title, description }, index) => (
         <div
           ref={container}
@@ -35,7 +34,9 @@ export const WhatWeDo = () => {
               alt="Zdjęcie"
             />
             <div className="flex gap-3 flex-col laptop:w-1/2 p-5 laptop:text-start text-[#fff]">
-              <p className="laptop:text-[40px]">{title}</p>
+              <p className="laptop:text-[40px] tablet:text-[25px] font-[900]">
+                {title}
+              </p>
               <p className="laptop:text-[20px]">{description}</p>
             </div>
           </div>

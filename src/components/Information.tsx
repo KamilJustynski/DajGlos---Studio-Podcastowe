@@ -1,32 +1,24 @@
 import { useEffect, useState } from "react";
 import { WHAT_WE_DO, FOR_WHO } from "../helpers";
-import { RxTriangleRight } from "react-icons/rx";
+import ForWhoTile from "./tiles/ForWhoTile";
 
 const Information = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % FOR_WHO.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
   return (
-    <div className="container mx-auto px-5 my-32">
+    <div className="container mx-auto px-5 my-32 tablet:my-44">
       <h3 className="text-[30px] tablet:hidden text-center tablet:text-[60px] text-[#FFFFFF]">
         Tworzymy przestrzeń...
       </h3>
       <div className="h-[200px] laptop:h-[500px] flex flex-col justify-center items-center tablet:items-start">
         <div className="tablet:w-auto text-[#FFFFFF] tablet:flex tablet:flex-col tablet:items-start hidden">
-          <h4 className="text-[30px] laptop:font-[700]">
+          <h3 className="text-[30px] laptop:font-[700] desktop:text-[40px]">
             Tworzymy przestrzeń...
-          </h4>
+          </h3>
           <div className="flex flex-col">
-            <p className="tablet:w-[310px]">
+            <p className="tablet:w-[310px] desktop:text-[24px] desktop:w-[700px]">
               do tworzenia najwyższej jakości materiałów takich jak:
             </p>
-            <div className="font-bold w-[310px] laptop:w-[400px]">
+            <div className="font-bold w-[310px] laptop:w-[400px] desktop:text-[24px] desktop:w-[700px] tablet:text-[13px]">
+              <br />
               Podcasty i videocasty,
               <br />
               Content na Social Media (viralowe rolki),
@@ -37,7 +29,7 @@ const Information = () => {
               Landing Page, Sklepy i Strony WWW,
               <br />
               Grafiki, Video i Reklamy <br />
-              <p className="hidden text-[#FFFFFF] laptop:flex laptop:mt-3">
+              <p className="hidden text-[#FFFFFF] font-normal laptop:flex laptop:mt-3">
                 Dzięki temu możesz dać swój głos światu i dzielić się ideami,
                 pasjami oraz mówić o swoim biznesie w profesjonalny i jakościowy
                 sposób.
@@ -45,39 +37,11 @@ const Information = () => {
             </div>
           </div>
         </div>
-        {FOR_WHO.map((word, index) => {
-          const position =
-            (index - currentIndex + FOR_WHO.length) % FOR_WHO.length;
-          const isCenter = position === 2;
-          const isZero = position === 0 || position === 5;
-          const isFour = position === 4;
-          const isOne = position === 1 || position === 3;
-
-          return (
-            <div
-              key={index}
-              className={`absolute tablet:right-20 laptop:left-1/3 laptop:ml-44 laptop:mt-20 w-max transform font-[900] -translate-x-1/2 transition-all duration-1000 ease-in-out
-                ${
-                  isCenter
-                    ? "text-[40px] tablet:text-[30px] laptop:text-[50px] text-[#F69197]"
-                    : "text-[20px] tablet:text-[15px] laptop:text-[30px] text-[#F69197] blur-[2px]"
-                }   ${isZero ? "blur-[3px]" : ""} ${
-                isFour ? "blur-[2px]" : ""
-              } ${isOne ? "blur-[1px]" : ""}`}
-              style={{
-                transform: `translateY(${
-                  position * 40 - (window.innerWidth >= 768 ? 140 : 60)
-                }px)`,
-              }}
-            >
-              {word}
-            </div>
-          );
-        })}
+        <ForWhoTile />
         <img
           src="Micro.png"
           alt=""
-          className="absolute right-0 hidden laptop:flex laptop:h-[600px]"
+          className="absolute right-0 hidden laptop:flex laptop:h-[600px] desktop:w-[900px] desktop:h-auto"
         />
         <p className="mt-10 hidden tablet:flex text-[#FFFFFF] laptop:hidden">
           Dzięki temu możesz dać swój głos światu i dzielić się ideami, pasjami

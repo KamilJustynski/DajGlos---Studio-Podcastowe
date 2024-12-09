@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="container relative mx-auto px-5 h-[calc(100vh-96px)] tablet:h-[calc(100vh-110px)] pb-10 tablet:pb-32 content-center laptop:mb-56">
+    <div className="container relative mx-auto px-5 h-[calc(100vh-96px)] tablet:h-[calc(100vh-150px)] pb-10 tablet:mb-64 content-center laptop:mb-56 desktop:h-[calc(100vh-20px)]">
       <motion.img
         initial={{ opacity: 0, y: 300 }}
         animate={{ opacity: 1, y: 0 }}
