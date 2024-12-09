@@ -1,12 +1,15 @@
 import React from "react";
+import { SectionHeaderScheme } from "../../interfaces";
 
-interface SectionHeader {
-  title: string;
-}
-
-const SectionHeader: React.FC<SectionHeader> = ({ title }) => {
+const SectionHeader: React.FC<SectionHeaderScheme> = ({
+  title,
+  color,
+  position,
+}) => {
   return (
-    <h1 className="text-center laptop:text-[150px] text-[60px] tablet:text-[70px] font-[900] text-[#F69197]">
+    <h1
+      className={`text-${position} laptop:text-[150px] text-[60px] tablet:text-[70px] font-[900] ${color}`}
+    >
       {title}
     </h1>
   );

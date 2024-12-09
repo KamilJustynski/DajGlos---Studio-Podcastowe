@@ -1,6 +1,6 @@
 const Video = () => {
   return (
-    <div className="container mx-auto px-5">
+    <div id="Dla kogo?" className="container mx-auto px-5">
       <div className="relative w-full">
         <p className="bg-[#EA7784] tablet:absolute tablet:-top-24 tablet:pb-4 tablet:w-[400px] tablet:right-0 z-50 text-center text-[12px] text-[#FFFFFF] py-3 px-5 rounded-full laptop:right-[90px] desktop:right-[100px] desktop:text-[20px] desktop:w-[500px] desktop:-top-32">
           Cześć, tu studio podcastowe “Daj Głos“ Aby pracować razem poznajmy się

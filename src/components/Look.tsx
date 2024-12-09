@@ -12,7 +12,11 @@ import SectionHeader from "./tiles/SectionHeader";
 export const Look = () => {
   return (
     <div className="container mx-auto px-5 my-32 relative">
-      <SectionHeader title="Jak to wygląda?" />
+      <SectionHeader
+        position="center"
+        color="text-[#F69197]"
+        title="Jak to wygląda?"
+      />
       <LookTile
         titleNumber="1"
         title="Gdy wiesz co chcesz stworzyć"

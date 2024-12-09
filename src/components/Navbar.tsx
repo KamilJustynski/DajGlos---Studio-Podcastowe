@@ -2,7 +2,7 @@ import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { NAVBAR_LINKS } from "../helpers";
 import { motion } from "framer-motion";
-
+import { Link } from "react-scroll";
 const Navbar = () => {
   const [open, isOpen] = useState(false);
 
@@ -23,23 +23,30 @@ const Navbar = () => {
 
       <div className="hidden laptop:flex text-white justify-center items-center gap-10 desktop:gap-16 laptop:text-[16px] desktop:text-[20px]">
         {NAVBAR_LINKS.map((link, index) => (
-          <a
-            href="#"
+          <Link
+            to={link}
+            smooth={true}
             key={index}
-            className="hover:text-[#E4E4E4] hover:scale-105 duration-150"
+            className="hover:text-[#E4E4E4] hover:scale-105 duration-150 cursor-pointer"
           >
             {link}
-          </a>
+          </Link>
         ))}
       </div>
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        transition={{ type: "spring", stiffness: 400, damping: 10 }}
-        className="hidden laptop:flex mr-10 rounded-[50px] text-[#fff] bg-[#567FD8] px-5 py-2 laptop:text-[16px] desktop:text-[20px] desktop:px-8 desktop:py-4"
+      <Link
+        className="hidden laptop:flex"
+        to="Bezpłatna konsultacja"
+        smooth={true}
       >
-        Bezpłatna konsultacja
-      </motion.button>
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          className="mr-10 rounded-[50px] text-[#fff] bg-[#567FD8] px-5 py-2 laptop:text-[16px] desktop:text-[20px] desktop:px-8 desktop:py-4"
+        >
+          Bezpłatna konsultacja
+        </motion.button>
+      </Link>
 
       {open && (
         <div
@@ -55,20 +62,28 @@ const Navbar = () => {
         <div className="flex justify-end p-4">
           <button
             onClick={handleOpen}
-            className="text-[#dd0326] text-3xl tablet:text-5xl font-bold"
+            className="text-[#567FD8] text-3xl tablet:text-5xl font-bold"
           >
             &times;
           </button>
         </div>
         <div className="flex flex-col text-white tablet:text-[20px] justify-center items-center gap-5 mt-10">
           {NAVBAR_LINKS.map((link, index) => (
-            <a href="#" key={index}>
+            <Link
+              className="cursor-pointer"
+              onClick={handleOpen}
+              to={link}
+              smooth={true}
+              key={index}
+            >
               {link}
-            </a>
+            </Link>
           ))}
-          <button className="bg-[#dd0326] p-3 w-[200px] tablet:w-[250px] font-bold rounded-full">
-            Bezpłatna konsultacja
-          </button>
+          <Link onClick={handleOpen} to="Bezpłatna konsultacja" smooth={true}>
+            <button className="bg-[#567FD8] p-3 w-[200px] tablet:w-[250px] font-bold rounded-full">
+              Bezpłatna konsultacja
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -3,16 +3,16 @@ import { motion } from "framer-motion";
 
 export const Valuations = () => {
   return (
-    <div className="container mx-auto px-5 my-32">
+    <div id="Wycena" className="container mx-auto px-5 my-32">
       <div className="flex items-center justify-center mb-10">
-        <SectionHeader title="Wycena" />
+        <SectionHeader position="center" color="text-[#FFF]" title="Wycena" />
         <img
           src="ArrowRight.png"
           alt=""
           className="w-20 h-20 laptop:w-56 laptop:h-56"
         />
       </div>
-      <div className="flex items-center justify-center laptop:mb-32">
+      <div className="flex items-center justify-center desktop:justify-around laptop:mb-32">
         <img
           src="Microphone.png"
           alt=""
@@ -34,7 +34,10 @@ export const Valuations = () => {
           </div>
         </div>
       </div>
-      <div className="w-full bg-[#F8F0E7] mt-16 h-[300px] tablet:h-[400px] laptop:h-[700px] rounded-[20px] relative overflow-hidden laptop:rounded-[50px]">
+      <div
+        id="Bezpłatna konsultacja"
+        className="w-full bg-[#F8F0E7] mt-16 h-[300px] tablet:h-[400px] laptop:h-[700px] rounded-[20px] relative overflow-hidden laptop:rounded-[50px]"
+      >
         <p className="text-[50px] tablet:text-[90px] laptop:text-[150px] laptop:pt-28 pt-12 pl-10 font-[900] text-[#DD0326]">
           Zarezerwuj studio
         </p>

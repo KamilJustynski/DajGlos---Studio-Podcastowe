@@ -12,8 +12,15 @@ export const WhatWeDo = () => {
   });
 
   return (
-    <main className="mt-32 mb-32 tablet:mt-44 container mx-auto px-5">
-      <SectionHeader title="Co robimy?" />
+    <main
+      id="Co możemy zrobić?"
+      className="mt-32 mb-32 tablet:mt-44 container mx-auto px-5"
+    >
+      <SectionHeader
+        position="start"
+        color="text-[#F69197]"
+        title="Co robimy?"
+      />
       {WHAT_WE_DO_SQUARE.map(({ image, title, description }, index) => (
         <div
           ref={container}

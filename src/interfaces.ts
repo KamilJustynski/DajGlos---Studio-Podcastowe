@@ -14,3 +14,9 @@ export interface LookTileScheme {
   height: string;
   width: string;
 }
+
+export interface SectionHeaderScheme {
+  title: string;
+  color: string;
+  position: string;
+}

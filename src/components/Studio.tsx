@@ -1,6 +1,6 @@
 const Studio = () => {
   return (
-    <div className="container mx-auto px-5 mb-32">
+    <div id="Zobacz studio" className="container mx-auto px-5 mb-32">
       <p className="text-[60px] font-[900] tablet:text-[70px] laptop:text-[200px] laptop:text-start text-center mb-10">
         <strong className="text-[#F69197]">Stu</strong>
         <strong className="text-[#fff]">dio</strong>
